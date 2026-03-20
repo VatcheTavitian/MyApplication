@@ -28,7 +28,7 @@ spec:
           - name: MESSAGE
             value: "Hello from $(APPNAME)! $(CUSTOM)"
         ports:
-          - containerPort: 80
+          - containerPort: 8080
       - name: app
         image: wil42/playground:v2
         ports:
