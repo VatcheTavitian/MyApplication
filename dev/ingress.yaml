@@ -26,3 +26,22 @@ spec:
             name: app-service
             port:
               number: 8888
+  - host: localhost
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: app-service
+              port:
+                number: 8888
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: app-service
+              port:
+                number: 8888
