@@ -4,6 +4,7 @@ metadata:
   name: app-ingress
   namespace: dev
 spec:
+  ingressClassName: traefik
   rules:
   - host: app.com
     http:
