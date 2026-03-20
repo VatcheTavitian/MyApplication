@@ -17,7 +17,7 @@ spec:
     spec:
      containers:
       - name: app
-        image: paulbouwer/hello-kubernetes:1.10
+        image: paulbouwer/hello-kubernetes:1.9
         env:
           - name: APPNAME
             valueFrom:
