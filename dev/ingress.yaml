@@ -36,7 +36,7 @@ spec:
               name: app-service
               port:
                 number: 8888
-    http:
+  - http:
       paths:
         - path: /
           pathType: Prefix
