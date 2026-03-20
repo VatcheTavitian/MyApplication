@@ -4,7 +4,7 @@ metadata:
   name: app-deployment
   namespace: dev
   labels:
-    app: app2
+    app: app
 spec:
   replicas: 1 
   selector:
@@ -23,8 +23,10 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.labels['app']
+          - name: CUSTOM
+            value: "This is a custom message!!"
           - name: MESSAGE
-            value: "Hello from $(APPNAME)!"
+            value: "Hello from $(APPNAME)! $(CUSTOM)"
         ports:
           - containerPort: 80
          
