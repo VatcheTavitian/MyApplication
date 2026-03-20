@@ -16,7 +16,7 @@ spec:
         app: app
     spec:
      containers:
-      - name: app
+      - name: myapp
         image: paulbouwer/hello-kubernetes:1.9
         env:
           - name: APPNAME
@@ -29,5 +29,9 @@ spec:
             value: "Hello from $(APPNAME)! $(CUSTOM)"
         ports:
           - containerPort: 80
+      - name: app
+        image: wil42/playground:v2
+        ports:
+          - containerPort: 8888
          
   
