@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/VatcheTavitian/MyApplication.git
+    repoURL: https://github.com/VatcheTavitian/vtavitiaMyApplication.git
     targetRevision: HEAD
     path: dev
 
