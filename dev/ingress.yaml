@@ -6,17 +6,17 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: myapp.localhost
+  - host: myapp.localhost # This is the hello k8s app
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: app-service
+            name: myapp-service
             port:
               number: 8080
-  - host: app.localhost
+  - host: app.localhost # This is the wil42 app req. by subject
     http:
       paths:
       - path: /
@@ -26,22 +26,22 @@ spec:
             name: app-service
             port:
               number: 8888
-  - host: localhost
-    http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: app-service
-              port:
-                number: 8888
-  - http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: app-service
-              port:
-                number: 8888
+  # - host: localhost
+  #   http:
+  #     paths:
+  #       - path: /
+  #         pathType: Prefix
+  #         backend:
+  #           service:
+  #             name: app-service
+  #             port:
+  #               number: 8888
+  # - http:
+  #     paths:
+  #       - path: /
+  #         pathType: Prefix
+  #         backend:
+  #           service:
+  #             name: app-service
+  #             port:
+  #               number: 8888
